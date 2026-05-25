@@ -627,3 +627,70 @@ legend {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================================
+   TABLES SILA (UNIT 11)
+   ========================================================================== */
+ 
+.data-table {
+    width: 100%;
+    border-collapse: collapse; /* Menjadikan batas dempet dengan sekitarnya */
+    margin-top: 16px;
+    min-width: 600px; /* Lebar batas mutlak */
+}
+ 
+.data-table caption {
+    text-align: left;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+ 
+.data-table th,
+.data-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #334155; /* Memberi garis bawah di setiap akhir barisan */
+}
+ 
+.data-table th {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+ 
+.data-table td {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+ 
+/* Exercise a: Zebra Stripes pada baris ganjil (odd) */
+.data-table tbody tr:nth-child(odd) {
+    background-color: rgba(30, 41, 59, 0.5); /* Warna abu-abu transparan lebur */
+}
+ 
+/* Hover Effect saat kursor mouse menyentuh baris tabel */
+.data-table tbody tr:hover {
+    background-color: #1e293b;
+}
+ 
+/* Responsif Mobile (Mengecilkan padding agar muat di HP) */
+@media (max-width: 768px) {
+    .data-table {
+        font-size: 0.8rem;
+    }
+    .data-table th,
+    .data-table td {
+        padding: 8px 10px;
+    }
+}
+ 
+/* Exercise b: Kode CSS khusus pembungkus table agar bisa scroll horizontal di HP */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
